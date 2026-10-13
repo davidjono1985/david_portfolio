@@ -1,59 +1,29 @@
-# Portfolio
+# David Johnson — portfolio
 
-### LINK TO SITE:
-### https://davidjono1985.github.io/david_portfolio/
+Static site published with GitHub Pages: https://davidjono1985.github.io/david_portfolio/
 
-### GITHUB:
-#### https://github.com/davidjono1985/Portfolio
+Plain HTML and CSS, no build step. Edit `index.html` and `style.css` directly. All paths are relative so the site works under `/david_portfolio/`.
 
-### TRELLO:
-#### https://trello.com/invite/b/CllWj1Xx/d6a663c631d8f954ada146cb253d0f6f/portfolio
+- `index.html` — the portfolio
+- `projects/` — detail pages for early (bootcamp) work, kept at their original URLs
+- `docs/VERIFICATION.md` — outstanding fact and link checks
 
-## PURPOSE: 
+## Rollback to the original portfolio
 
-The purpose of my website is to outline my skills as a designer and developer, showcase my previous projects and provide links to all of my social media.
+The site as published before the October 2026 redesign is preserved at commit
+`6413c39d046004284ec785db0c24d34f14eecd18` (master, "updated tech stack", 2020-08-10) and on the remote branch
+`portfolio-before-redesign-2026-10-13`, which points at exactly that commit. (An annotated tag could not be pushed from the
+build environment, so a branch is used instead.) It is also viewable at `/archive/original/` on the live site.
 
-## TARGET AUDIENCE:
-My target audience consists of my peers as well as prospective employers or investors.  
+To restore it, either revert the redesign merge on `master`:
 
-## TECH STACK:
-html and scss (by using scss) - deployed on Github. 
-Target audience: My target audience consists of my peers and prospective employers or investors.  
-Tech stack: html and scss (by using scss) - deployed on Github. 
+    git revert -m 1 <redesign-merge-commit>
 
- ## FUNCTIONALITY / FEATURES: 
-The design, layout, colours and fonts were chosen for my website in order to maximise "ease of use" for the user. Here are some of the components:
+or restore the old files without touching history:
 
+    git fetch origin portfolio-before-redesign-2026-10-13
+    git checkout origin/portfolio-before-redesign-2026-10-13 -- .
+    git rm -r -q archive docs photo/projects   # folders added by the redesign
+    git commit -m "Restore original portfolio"
 
-### COMPONENT 1
-The First component I would like to mention is the NAV bar.  At full-screen it is sticky and remains at the top of the screen as the user scrolls down.  On mobile it is a hamburger selector that the user clicks on to navigate to the specific sections
-
-### COMPONENT 2
-The second component is in the "projects section".  Each project is contained in it's own boxed section with title and a descriptive image.  There is also a link on each which takes to a page specific to that project which contains further details and gives the user the ability to return to the main portfolio
-
-### COMPONENT 3
-The third component is the plethora of Links – starting with the "View Work History (Resume)" button found at the bottom of the projects section. The button changes colour when hovered on and directly links to a PDF version of my RESUME. The same hover approach has been incorporated for all of my social media links. I have also added “words” within paragraphs that link to external websites.
-
-
-
-### COMPONENT 4
-Lastly I would like to make mention of the contact form in the "contact" section of the website.  It allows the user to enter their name, email and message and allows for this information to be directed to my personal email address.  
-
-## MOOD BOARD:
-![moodboard](./photo/MoodBoard.png) 
-
-## SITE MAP:
-![sitemap](./photo/sitemap.png) 
-
-## WEB SCREENSHOTS:
-![screenshot1](./photo/screenshot1.png)
-![screenshot2](./photo/screenshot2.png)
-![screenshot3](./photo/screenshot3.png)
-![screenshot4](./photo/screenshot4.png)
-
-## MOBILE SCREENSHOTS: 
-![screenshot5](./photo/screenshot5.png)
-![screenshot6](./photo/screenshot6.png)
-![screenshot7](./photo/screenshot7.png)
-![screenshot8](./photo/screenshot8.png)
-![screenshot9](./photo/screenshot9.png)
+Do not delete the backup branch.
