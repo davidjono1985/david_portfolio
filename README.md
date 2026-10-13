@@ -23,7 +23,7 @@ or restore the old files without touching history:
 
     git fetch origin portfolio-before-redesign-2026-10-13
     git checkout origin/portfolio-before-redesign-2026-10-13 -- .
-    git rm -r --cached archive docs photo/projects   # then delete those folders, which did not exist before
+    git rm -r -q archive docs photo/projects   # folders added by the redesign
     git commit -m "Restore original portfolio"
 
 Do not delete the backup branch.
