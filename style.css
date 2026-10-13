@@ -60,6 +60,7 @@ section.alt{background:var(--surface);border-block:1px solid var(--line)}
 .cover.c-aussie{--c1:#8a3a07;background:linear-gradient(135deg,#7c2d12,#b45309)}
 .cover.c-joshi{--c1:#5b21b6;background:linear-gradient(135deg,#3b0764,#6d28d9 60%,#a21caf)}
 .cover.c-trackn{--c1:#0f3d4a;background:linear-gradient(135deg,#0c2d38,#0b7a68)}
+.cover.c-mareni{--c1:#831843;background:linear-gradient(135deg,#831843,#be185d)}
 .cover.c-jelly{--c1:#1e3a8a;background:linear-gradient(135deg,#1e3a8a,#1d4ed8 60%,#0e7490)}
 .grid{display:grid;gap:1.25rem;grid-template-columns:1fr}
 @media(min-width:768px){.grid.two{grid-template-columns:repeat(2,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}}
